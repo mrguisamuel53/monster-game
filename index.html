@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="style.css">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
@@ -30,13 +30,13 @@
 				</div>
 			</div>
 			<hr>
-			<div class="box">
+			<div class="box" v-show="!startGame">
 				<button class="main-buttons" style="background-color: red; color: white;">Attack</button>
 				<button class="main-buttons" style="background-color: yellow; color: black;">Special Attack</button>
 				<button class="main-buttons" style="background-color: green; color: white;">Heal</button>
-				<button class="main-buttons" style="background-color: gray; color: black;">Desist</button>
+				<button class="main-buttons" @click="startGame = !startGame" style="background-color: gray; color: black;" >Desist</button>
 			</div>
-			<div class="box">
+			<div class="box" v-show="startGame" @click="startGame = !startGame">
 				<button class="main-buttons" style="background-color: purple; color: white;">Start Game</button>
 			</div>
 		</div>
