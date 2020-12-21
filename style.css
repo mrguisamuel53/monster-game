@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap');
 
+* {
+	font-family: 'Nova Flat', cursive;
+
+}
+
 h1 {
 	padding: 0;
 	margin: 0;
@@ -9,7 +14,7 @@ h1 {
 }
 
 
-.box-bars {
+.box {
 	border: 5px solid black;
 	display: flex;
 	justify-content: space-around;
@@ -28,6 +33,10 @@ h1 {
 }
 
 .percent {
-	font: 2rem 'Nova Flat', cursive;
 	text-align: center;
+}
+
+.main-buttons {
+	font-size: 30px;
+	padding: 15px;
 }
