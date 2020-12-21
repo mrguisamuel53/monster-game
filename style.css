@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap');
 
 h1 {
 	padding: 0;
@@ -24,4 +25,9 @@ h1 {
 .progress {
 	background-color: red; /* temporário */
 	height: 100%;
+}
+
+.percent {
+	font: 2rem 'Nova Flat', cursive;
+	text-align: center;
 }
