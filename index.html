@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Monster Game</title>
-    </head>
-    <body>
-        
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
+		<title>Monster Game</title>
+    	</head>
+	<body>
+		<h1>Monster Game</h1>
+		<div class="box">
+			<div class="player">
+				<h1>Player</h1>
+				<div class="progress-bar">
+					<div class="progress" style="width: 50%;"></div>
+				</div>
+				<p class="percent">0%</p>
+			</div>
+			<div class="monster">
+				<h1>Monster</h1>
+				<div class="progress-bar">
+					<div class="progress"></div>
+				</div>
+				<p class="percent">0%</p>
+			</div>
+		</div>
+		<hr>
+		<div class="box">
+			<button class="main-buttons" style="background-color: red; color: white;">Attack</button>
+			<button class="main-buttons" style="background-color: yellow; color: black;">Special Attack</button>
+			<button class="main-buttons" style="background-color: green; color: white;">Heal</button>
+			<button class="main-buttons" style="background-color: gray; color: black;">Desist</button>
+		</div>
+	</body>
 </html>
