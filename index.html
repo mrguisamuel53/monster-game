@@ -17,14 +17,14 @@
 				<div class="player">
 					<h1>Player</h1>
 					<div class="progress-bar">
-						<div class="progress" :style="[{width:lifePlayer+'%'}]"></div>
+						<div class="progress" :style="[{width:lifePlayer+'%', backgroundColor: lifePlayer <= 20 ? 'red' : 'green'}]"></div>
 					</div>
 					<p class="percent">{{lifePlayer}}%</p>
 				</div>
 				<div class="monster">
 					<h1>Monster</h1>
 					<div class="progress-bar">
-						<div class="progress" :style="[{width:lifeEnemy+'%'}]"></div>
+						<div class="progress" :style="[{width:lifeEnemy+'%', backgroundColor: lifeEnemy <= 20 ? 'red' : 'green'}]"></div>
 					</div>
 					<p class="percent">{{lifeEnemy}}%</p>
 				</div>
