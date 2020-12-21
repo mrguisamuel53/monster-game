@@ -27,9 +27,10 @@ h1 {
 	width: 500px;
 }
 
-.progress {
-	background-color: red; /* temporário */
+.progress-bar .progress {
+	background-color: red;
 	height: 100%;
+	/*width: 100%;*/
 }
 
 .percent {
@@ -40,5 +41,3 @@ h1 {
 	font-size: 30px;
 	padding: 15px;
 }
-
-

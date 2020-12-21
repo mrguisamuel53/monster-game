@@ -18,6 +18,10 @@ window.onload = function() {
 			damage(event, min, max) {
 				this.lifePlayer -= (Math.floor(Math.random() * max+2) + min+2)
 				this.lifeEnemy -= (Math.floor(Math.random() * max) + min)
+			},
+			changeColor(event, color1, color2) {
+				'lifePlayer' <= 20 ? color1, color2
+				'lifeEnemy' <= 20 ? color1, color2
 			}
 		}
 	});

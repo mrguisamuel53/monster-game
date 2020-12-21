@@ -17,14 +17,14 @@
 				<div class="player">
 					<h1>Player</h1>
 					<div class="progress-bar">
-						<div class="progress"></div>
+						<div class="progress" :style="[{width:lifePlayer+'%'}]"></div>
 					</div>
 					<p class="percent">{{lifePlayer}}%</p>
 				</div>
 				<div class="monster">
 					<h1>Monster</h1>
 					<div class="progress-bar">
-						<div class="progress"></div>
+						<div class="progress" :style="[{width:lifeEnemy+'%'}]"></div>
 					</div>
 					<p class="percent">{{lifeEnemy}}%</p>
 				</div>
@@ -34,7 +34,7 @@
 				<button class="main-buttons" @click="damage($event, 5, 10)" style="background-color: red; color: white;">Attack</button>
 				<button class="main-buttons" style="background-color: yellow; color: black;">Special Attack</button>
 				<button class="main-buttons" style="background-color: green; color: white;">Heal</button>
-				<button class="main-buttons" @click="startGame = !startGame" style="background-color: gray; color: black;" >Desist</button>
+				<button class="main-buttons" @click="startGame = !startGame" style="background-color: gray; color: black;">Desist</button>
 			</div>
 			<div class="box" v-show="startGame" @click="startGame = !startGame">
 				<button class="main-buttons" style="background-color: purple; color: white;">Start Game</button>
