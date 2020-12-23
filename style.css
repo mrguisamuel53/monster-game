@@ -16,9 +16,9 @@ h1 {
 
 .box {
 	border: 5px solid black;
+	padding: 50px 0px;
 	display: flex;
 	justify-content: space-around;
-	padding: 50px 0px;
 }
 
 .progress-bar {
@@ -28,7 +28,7 @@ h1 {
 }
 
 .progress-bar .progress {
-	background-color: red;
+/*	background-color: red;*/
 	height: 100%;
 	/*width: 100%;*/
 }
@@ -40,4 +40,8 @@ h1 {
 .main-buttons {
 	font-size: 30px;
 	padding: 15px;
+}
+
+.final-message {
+	font-size: 3rem;
 }
