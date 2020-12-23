@@ -30,14 +30,19 @@
 				</div>
 			</div>
 			<hr>
-			<div class="box" v-show="!startGame">
-				<button class="main-buttons" @click="damage($event, 5, 10, 2, 2, 0, 0)" style="background-color: red; color: white;">Attack</button>
-				<button class="main-buttons" @click="damage($event, 10, 15, 0, 0, 3, 3)" style="background-color: yellow; color: black;">Special Attack</button>
-				<button class="main-buttons" @click="heal($event, 10, 15, 0, 0)" style="background-color: green; color: white;">Heal</button>
-				<button class="main-buttons" @click="resetGame()" style="background-color: gray; color: black;">Desist</button>
-			</div>
-			<div class="box" v-show="startGame" @click="startGame = !startGame">
-				<button class="main-buttons" style="background-color: purple; color: white;">Start Game</button>
+			<div class="box">
+				<div v-if="!gameMode">
+					<button class="main-buttons" @click="damage($event, 5, 10, 2, 2, 0, 0)" style="background-color: red; color: white;">Attack</button>
+					<button class="main-buttons" @click="damage($event, 10, 15, 0, 0, 3, 3)" style="background-color: yellow; color: black;">Special Attack</button>
+					<button class="main-buttons" @click="heal($event, 10, 15, 0, 0)" style="background-color: green; color: white;">Heal</button>
+					<button class="main-buttons" @click="resetGame()" style="background-color: gray; color: black;">Desist</button>
+				</div>
+				<div v-else>
+					<h1 v-if="message == 2">Player wins!</h1>
+					<h1 v-else-if="message == 1">Monster wins!</h1>
+					<h1 v-else-if="message == 3">Tie</h1>
+					<button class="main-buttons" style="background-color: purple; color: white;" @click="resetGame()">Start Game</button>
+				</div>
 			</div>
 		</div>
 		<script src="app.js"></script>
