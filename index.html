@@ -31,8 +31,8 @@
 			</div>
 			<hr>
 			<div v-if="!gameMode" class="box">
-				<button class="main-buttons" @click="damage($event, 5, 10, 2, 2, 0, 0)" style="background-color: red; color: white;">Attack</button>
-				<button class="main-buttons" @click="damage($event, 10, 15, 0, 0, 3, 3)" style="background-color: yellow; color: black;">Special Attack</button>
+				<button class="main-buttons" @click="damage($event, 5, 10, 2, 0)" style="background-color: red; color: white;">Attack</button>
+				<button class="main-buttons" @click="damage($event, 10, 15, 2, 0)" style="background-color: yellow; color: black;">Special Attack</button>
 				<button class="main-buttons" @click="heal($event, 10, 15, 0, 0)" style="background-color: green; color: white;">Heal</button>
 				<button class="main-buttons" @click="resetGame()" style="background-color: gray; color: black;">Desist</button>
 			</div>
@@ -42,6 +42,12 @@
 				<h1 v-else-if="message == 3" class="final-message">Tie</h1>
 				<button class="main-buttons" style="background-color: purple; color: white;" @click="resetGame()">Start Game</button>
 			</div>
+			<div class="log-messages">
+				<p class="log-msg" style="background-color: blue;">Player attacked with {{returnPlayer}} strength</p>
+				<p class="log-msg" style="background-color: red;">Monster attacked with {{returnEnemy}} strength</p>
+				<p class="log-msg" style="background-color: green;">Player healed with {{returnPlayer}} strength</p>
+			</div>
+			<!-- test doesn't apper-->
 		</div>
 		<script src="app.js"></script>
 	</body>
