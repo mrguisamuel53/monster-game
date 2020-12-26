@@ -45,3 +45,10 @@ h1 {
 .final-message {
 	font-size: 3rem;
 }
+
+.log-msg {
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
