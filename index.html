@@ -32,15 +32,15 @@
 			<hr>
 			<div v-if="!gameMode" class="box">
 				<button class="main-buttons" @click="damage($event, 5, 10, 2, 0)" style="background-color: red; color: white;">Attack</button>
-				<button class="main-buttons" @click="damage($event, 10, 15, 2, 0)" style="background-color: yellow; color: black;">Special Attack</button>
+				<button class="main-buttons" @click="damage($event, 10, 15, 0, 3)" style="background-color: yellow; color: black;">Special Attack</button>
 				<button class="main-buttons" @click="heal($event, 10, 15, 0, 0)" style="background-color: green; color: white;">Heal</button>
-				<button class="main-buttons" @click="resetGame()" style="background-color: gray; color: black;">Desist</button>
+				<button class="main-buttons" @click="resetGame()" style="background-color: gray; color: black;">Give Up</button>
 			</div>
 			<div v-else class="box">
-				<h1 v-if="message == 2" class="final-message">Player wins!</h1>
-				<h1 v-else-if="message == 1" class="final-message">Monster wins!</h1>
+				<h1 v-if="message == 2" class="final-message">Player won!</h1>
+				<h1 v-else-if="message == 1" class="final-message">Monster won!</h1>
 				<h1 v-else-if="message == 3" class="final-message">Tie</h1>
-				<button class="main-buttons" style="background-color: purple; color: white;" @click="resetGame()">Start Game</button>
+				<button class="main-buttons" style="background-color: purple; color: white;" @click="resetGame()">New Game</button>
 			</div>
 			<div class="log-messages">
 				<p class="log-msg" style="background-color: blue;" v-for="message in logMessages">{{message}}</p>
