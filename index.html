@@ -3,36 +3,49 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="style.css">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
+		<script src="https://unpkg.com/vue"></script>
 		<title>Monster Game</title>
     	</head>
 	<body>
 		<h1>Monster Game</h1>
-		<div class="box">
-			<div class="player">
-				<h1>Player</h1>
-				<div class="progress-bar">
-					<div class="progress" style="width: 50%;"></div>
+		<div id="app">
+			<div class="box">
+				<div class="player">
+					<h1>Player</h1>
+					<div class="progress-bar">
+						<div class="progress" :style="[{width:lifePlayer+'%', backgroundColor: lifePlayer <= 20 ? 'red' : 'green'}]"></div>
+					</div>
+					<p class="percent">{{lifePlayer}}%</p>
 				</div>
-				<p class="percent">0%</p>
+				<div class="monster">
+					<h1>Monster</h1>
+					<div class="progress-bar">
+						<div class="progress" :style="[{width:lifeEnemy+'%', backgroundColor: lifeEnemy <= 20 ? 'red' : 'green'}]"></div>
+					</div>
+					<p class="percent">{{lifeEnemy}}%</p>
+				</div>
 			</div>
-			<div class="monster">
-				<h1>Monster</h1>
-				<div class="progress-bar">
-					<div class="progress"></div>
-				</div>
-				<p class="percent">0%</p>
+			<hr>
+			<div v-if="!gameMode" class="box">
+				<button class="main-buttons" @click="damage($event, 5, 10, 2, 0)" style="background-color: red; color: white;">Attack</button>
+				<button class="main-buttons" @click="damage($event, 10, 15, 2, 0)" style="background-color: yellow; color: black;">Special Attack</button>
+				<button class="main-buttons" @click="heal($event, 10, 15, 0, 0)" style="background-color: green; color: white;">Heal</button>
+				<button class="main-buttons" @click="resetGame()" style="background-color: gray; color: black;">Desist</button>
+			</div>
+			<div v-else class="box">
+				<h1 v-if="message == 2" class="final-message">Player wins!</h1>
+				<h1 v-else-if="message == 1" class="final-message">Monster wins!</h1>
+				<h1 v-else-if="message == 3" class="final-message">Tie</h1>
+				<button class="main-buttons" style="background-color: purple; color: white;" @click="resetGame()">Start Game</button>
+			</div>
+			<div class="log-messages">
+				<p class="log-msg" style="background-color: blue;" v-for="message in logMessages">{{message}}</p>
 			</div>
 		</div>
-		<hr>
-		<div class="box">
-			<button class="main-buttons" style="background-color: red; color: white;">Attack</button>
-			<button class="main-buttons" style="background-color: yellow; color: black;">Special Attack</button>
-			<button class="main-buttons" style="background-color: green; color: white;">Heal</button>
-			<button class="main-buttons" style="background-color: gray; color: black;">Desist</button>
-		</div>
+		<script src="app.js"></script>
 	</body>
 </html>

@@ -16,9 +16,9 @@ h1 {
 
 .box {
 	border: 5px solid black;
+	padding: 50px 0px;
 	display: flex;
 	justify-content: space-around;
-	padding: 50px 0px;
 }
 
 .progress-bar {
@@ -27,9 +27,10 @@ h1 {
 	width: 500px;
 }
 
-.progress {
-	background-color: red; /* temporário */
+.progress-bar .progress {
+/*	background-color: red;*/
 	height: 100%;
+	/*width: 100%;*/
 }
 
 .percent {
@@ -39,4 +40,15 @@ h1 {
 .main-buttons {
 	font-size: 30px;
 	padding: 15px;
+}
+
+.final-message {
+	font-size: 3rem;
+}
+
+.log-msg {
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding: 20px;
 }
