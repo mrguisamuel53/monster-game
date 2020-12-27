@@ -11,7 +11,7 @@ Basically, the game (or project) works like this:
 
 **HEAL** - action that when is executed, player healed the life, but monster attack player in same time.
 
-**GIVE UP** - Reset or exit the game.
+**GIVE UP** - Reset the game.
 
 ## My Version
 ![Screenshot from 2020-12-27 19-21-49](https://user-images.githubusercontent.com/73722088/103180928-ae73cf00-4879-11eb-9fee-a993e346a5c6.png)
