@@ -18,13 +18,6 @@ window.onload = function() {
 			returnEnemy() {
 				return this.enemyActions[this.counter]
 			},
-			resetGame() {
-				this.gameMode = !this.gameMode
-				this.lifePlayer = 100
-				this.lifeEnemy = 100
-				this.message = 0
-				this.logMessages.length = 0
-			},
 		},
 		methods: {
 			death() {
@@ -72,6 +65,13 @@ window.onload = function() {
 					this.death()
 				}
 				this.logMessages.reverse()
+			},
+			resetGame() {
+				this.gameMode = !this.gameMode
+				this.lifePlayer = 100
+				this.lifeEnemy = 100
+				this.message = 0
+				this.logMessages.length = 0
 			},
 		}
 	});
