@@ -68,3 +68,43 @@ html {
 .result .lose {
 	color: red;
 }
+
+/* Buttons area (Game's control) */
+
+.buttons {
+	display: flex;
+	justify-content: center;
+}
+
+.btn {
+	padding: 5px 10px;
+	margin: 0px 10px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 1rem;
+}
+
+.new-game {
+	background-color: blue;
+	color: white;
+}
+
+.attack {
+	background-color: red;
+	color: white;
+}
+
+.special-attack {
+	background-color: orange;
+	color: black;
+}
+
+.heal {
+	background-color: green;
+	color: white;
+}
+
+.give-up {
+	background-color: gray;
+	color: black;
+}
