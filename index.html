@@ -10,10 +10,28 @@
 </head>
 <body>
     <div id="app">
-        <div class="panel-scores"></div>
-        <div class="panel-result"></div>
-        <div class="panel-buttons"></div>
-        <div class="panel-logs"></div>
+        <div class="panel scores">
+            <div class="score">
+                <h1>Player</h1>
+                <div class="life-bar">
+                    <div class="life" :class="{danger: playerLife < 20}" :style="{width: playerLife + '%'}">
+                    </div>
+                    <div>{{playerLife}}%</div>
+                </div>
+            </div>
+            <div class="score">
+                <h1>Monster</h1>
+                <div class="life-bar">
+                    <div class="life" :class="{danger: monsterLife < 20}" :style="{width: monsterLife + '%'}">
+
+                    </div>
+                    <div>{{monsterLife}}%</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel result"></div>
+        <div class="panel buttons"></div>
+        <div class="panel logs"></div>
     </div>
     <script src="app.js"></script>
 </body>
