@@ -10,8 +10,6 @@ window.onload = function() {
 			enemyActions: [],
 			logMessages: [],
 			counter: -1,
-			select: 0,
-			setColor: ''
 		},
 		computed: {
 			returnPlayer() {
@@ -19,6 +17,13 @@ window.onload = function() {
 			},
 			returnEnemy() {
 				return this.enemyActions[this.counter]
+			},
+			resetGame() {
+				this.gameMode = !this.gameMode
+				this.lifePlayer = 100
+				this.lifeEnemy = 100
+				this.message = 0
+				this.logMessages.length = 0
 			},
 		},
 		methods: {
@@ -29,8 +34,6 @@ window.onload = function() {
 			},
 			damage(event, min, max, atk1, atk2) {
 				this.counter++
-				this.select = 1
-				//this.addMessage()
 				atk1 = Math.floor(Math.random() * max+atk1) + min
 				atk2 = Math.floor(Math.random() * max+atk2) + min
 
@@ -53,7 +56,6 @@ window.onload = function() {
 			},
 			heal(event, min, max, hth, atk) {
 				this.counter++
-				this.select = 2
 				hth = Math.floor(Math.random() * max) + min
 				atk = Math.floor(Math.random() * max-3) + min-3
 				this.playerActions.push(hth)
@@ -71,25 +73,6 @@ window.onload = function() {
 				}
 				this.logMessages.reverse()
 			},
-			resetGame() {
-				this.gameMode = !this.gameMode
-				this.lifePlayer = 100
-				this.lifeEnemy = 100
-				this.message = 0
-			},
-			testString() {
-				for(i = 0; i < this.logMessages.length; i++)
-				{
-					if(this.logMessages[i].includes('Player'))
-					{
-						this.setColor = 'blue'	
-					}
-					else if(this.logMessages[i].includes('Enemy'))
-					{
-						this.setColor = 'red'
-					}
-				}
-			}
 		}
 	});
 }

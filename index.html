@@ -43,11 +43,8 @@
 				<button class="main-buttons" style="background-color: purple; color: white;" @click="resetGame()">Start Game</button>
 			</div>
 			<div class="log-messages">
-				<p class="log-msg" :style="[{backgroundColor: setColor}]" v-for="message in logMessages">{{message}}</p>
-				<!--<p class="log-msg" style="background-color: red;">Monster attacked with {{returnEnemy}} strength</p>
-				<p class="log-msg" style="background-color: green;">Player healed with {{returnPlayer}} strength</p>-->
+				<p class="log-msg" style="background-color: blue;" v-for="message in logMessages">{{message}}</p>
 			</div>
-			<!-- test doesn't apper-->
 		</div>
 		<script src="app.js"></script>
 	</body>
